@@ -1,0 +1,28 @@
+from pathlib import Path
+
+##############################
+# Globals
+##############################
+
+PROJECT_DIR = Path(".").absolute()
+PROJECT_NAME = "{{ cookiecutter.repo_name }}"
+PYTHON_INTERPRETER = "{{ cookiecutter.python_interpreter }}"
+
+workdir: PROJECT_DIR
+
+
+##############################
+# Project rules
+##############################
+RESULT_FILES = []
+
+rule all:
+    """Default rule to generate final report/results"""
+    input: RESULT_FILES
+    output: "foo.bar"
+    shell:
+        "echo Modify all rule to generate relevant target and list relevant result files"
+
+##############################
+# Includes
+##############################
