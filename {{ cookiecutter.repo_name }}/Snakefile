@@ -6,7 +6,6 @@ from pathlib import Path
 
 PROJECT_DIR = Path(".").absolute()
 PROJECT_NAME = "{{ cookiecutter.repo_name }}"
-PYTHON_INTERPRETER = "{{ cookiecutter.python_interpreter }}"
 
 workdir: PROJECT_DIR
 
