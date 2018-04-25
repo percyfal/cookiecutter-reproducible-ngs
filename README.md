@@ -34,41 +34,45 @@ $ conda install cookiecutter
 The directory structure of your new project looks like this: 
 
 ```
+project_name/                <- top-level project folder
+│
+├── AUTHORS.md               <- list of authors
+├── Dockerfile               <- docker template
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+├── Makefile                 <- makefile with project management rules like `make clean` or `make docs`
+├── README.md                <- Top-level README
+├── Snakefile                <- Snakemake workflow manager top-level file. The `all` target should collect 
+│                               all relevant output files and generate the final results and reports
+│
+├── config                   <- configuration directory for Snakemake and other things
+│
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── external             <- data from third party sources
+│   ├── interim              <- Intermediate data that can be safely deleted
+│   ├── processed            <- Final processed data used for analyses
+│   └── raw                  <- The original immutable data dump to be treated as read-only.
 │
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+├── docs                     <- A default Sphinx project. See sphinx-doc.org for details.
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── environment.yml          <- Conda environment file
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── logs                     <- Collection of log outputs, e.g. from cluster managers
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── notebooks                <- Jupyter, Rmarkdown and other notebooks.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+├── reports                  <- Generated analyses and articles as html, pdf and more.
+│   └── figures              <- Graphics for use in reports.
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── results                  <- Final results for sharing with collaborators, typically derived 
+│                               or copied from data/processed
 │
-├── src                <- Source code for use in this project.
-
+└── src                      <- Project source code
+    ├── R                    <- R sources
+    ├── snakemake            <- snakemake workflow files
+    └── python_module        <- Python module directory, by default named by the project
 ```
 
 ### Installing development requirements
-------------
+----------------------------------------
 
     pip install -r requirements.txt
-
-### Running the tests
-------------
-
-    py.test tests
