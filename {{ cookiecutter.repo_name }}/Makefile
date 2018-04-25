@@ -30,8 +30,6 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PROJECT_NAME = {{ cookiecutter.repo_name }}
-DOCKERUSER = {{ cookiecutter.docker_user }}
-DOCKERTAG = {{ cookiecutter.docker_tag }}
 
 
 ifeq (,$(shell which conda))
@@ -73,13 +71,13 @@ showdocs: ## Show the documentation in a html browser
 	$(BROWSER) docs/_build/html/index.html
 
 docker: clean ## Make docker image
-	docker build -t ${DOCKERTAG} .
+	docker build -t ${DOCKER_REPO}/${DOCKER_TAG} . --build-arg DOCKER_REPO=${DOCKER_REPO}
 
 dockertag: docker ## Make docker image and tag
-	docker tag ${id} ${DOCKERUSER}/${DOCKERTAG}:latest
+	docker tag ${id} ${DOCKER_REPO}/${DOCKER_TAG} ${DOCKER_REPO}/${DOCKER_TAG}:latest
 
 dockerupload: clean dockertag ## Make docker image and upload
-	docker push ${DOCKERUSER}/${DOCKERTAG}
+	docker push ${DOCKER_REPO}/${DOCKER_TAG}:latest
 
 
 ##############################
