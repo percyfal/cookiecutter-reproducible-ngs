@@ -3,6 +3,8 @@
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "python_module": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "Your name (or your organization/company/team)",
+    "docker_user": "your_docker_user_name",
+    "docker_tag": "docker_tag",
     "description": "A short description of the project.",
     "open_source_license": ["MIT", "BSD-3-Clause", "No license file"]
 }

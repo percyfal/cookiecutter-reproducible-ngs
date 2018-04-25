@@ -9,7 +9,8 @@ PROJECT_NAME = "{{ cookiecutter.repo_name }}"
 
 workdir: PROJECT_DIR
 
-
+configfile: Path("config/config.yml")
+    
 ##############################
 # Project rules
 ##############################

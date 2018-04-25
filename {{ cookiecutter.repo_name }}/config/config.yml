@@ -1,1 +1,2 @@
 # Snakemake configuration file
+foo: bar
