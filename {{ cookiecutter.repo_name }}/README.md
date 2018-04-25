@@ -34,6 +34,8 @@ project_name/                <- top-level project folder
 │
 ├── notebooks                <- Jupyter, Rmarkdown and other notebooks.
 │
+├── opt                      <- for installation of add-on application software packages
+│
 ├── references               <- Literature, manuals and other references
 │
 ├── reports                  <- Generated analyses and articles as html, pdf and more.

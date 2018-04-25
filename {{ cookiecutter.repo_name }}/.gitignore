@@ -81,6 +81,9 @@ target/
 # exclude logs from source control
 /logs/
 
+# exclude opt from source control
+/opt/
+
 # Mac OS-specific storage files
 .DS_Store
 
