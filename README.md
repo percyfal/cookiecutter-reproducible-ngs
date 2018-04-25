@@ -49,6 +49,7 @@ project_name/                <- top-level project folder
 ├── data
 │   ├── external             <- data from third party sources
 │   ├── interim              <- Intermediate data that can be safely deleted
+│   ├── metadata             <- metadata describing raw data files
 │   ├── processed            <- Final processed data used for analyses
 │   └── raw                  <- The original immutable data dump to be treated as read-only.
 │
@@ -59,6 +60,8 @@ project_name/                <- top-level project folder
 ├── logs                     <- Collection of log outputs, e.g. from cluster managers
 │
 ├── notebooks                <- Jupyter, Rmarkdown and other notebooks.
+│
+├── references               <- Literature, manuals and other references
 │
 ├── reports                  <- Generated analyses and articles as html, pdf and more.
 │   └── figures              <- Graphics for use in reports.
