@@ -61,6 +61,10 @@ project_name/                <- top-level project folder
 │
 ├── notebooks                <- Jupyter, Rmarkdown and other notebooks.
 │
+├── opt                      <- for installation of add-on application software packages
+│                               via package managers such as conda or pip
+│                               (see File System Hierarchy standard, http://www.pathname.com/fhs/pub/fhs-2.3.html)
+│
 ├── references               <- Literature, manuals and other references
 │
 ├── reports                  <- Generated analyses and articles as html, pdf and more.
@@ -71,6 +75,7 @@ project_name/                <- top-level project folder
 │
 └── src                      <- Project source code
     ├── R                    <- R sources
+	├── scripts              <- shell scripts
     ├── snakemake            <- snakemake workflow files
     └── python_module        <- Python module directory, by default named by the project
 ```

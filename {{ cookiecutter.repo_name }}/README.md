@@ -34,7 +34,9 @@ project_name/                <- top-level project folder
 │
 ├── notebooks                <- Jupyter, Rmarkdown and other notebooks.
 │
-├── opt                      <- for installation of add-on application software packages
+├── opt                      <- for installation of add-on application software packages that are unavailable
+│                               via package managers such as conda or pip
+│                               (see File System Hierarchy standard, http://www.pathname.com/fhs/pub/fhs-2.3.html)
 │
 ├── references               <- Literature, manuals and other references
 │
@@ -46,10 +48,12 @@ project_name/                <- top-level project folder
 │
 └── src                      <- Project source code
     ├── R                    <- R sources
+    ├── scripts              <- shell scripts
     ├── snakemake            <- snakemake workflow files
     └── python_module        <- Python module directory, by default named by the project
 ```
 
 -------------
 
-<p><small>Project based on the <a target="_blank" href="https://github.com/percyfal/cookiecutter-reproducible-ngs">cookiecutter reproducible ngs project template</a>.</small></p>
+Project based on the [cookiecutter reproducible ngs project template](https://github.com/percyfal/cookiecutter-reproducible-ngs)
+
