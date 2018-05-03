@@ -7,7 +7,7 @@ Project Organization
 --------------------
 
 ```
-project_name/                <- top-level project folder
+{{cookiecutter.project_name}}/                <- top-level project folder
 │
 ├── AUTHORS.md               <- list of authors
 ├── Dockerfile               <- docker template
@@ -50,7 +50,7 @@ project_name/                <- top-level project folder
     ├── R                    <- R sources
     ├── scripts              <- shell scripts
     ├── snakemake            <- snakemake workflow files
-    └── python_module        <- Python module directory, by default named by the project
+    └── {{cookiecutter.python_module}}        <- Python module directory, by default named by the project
 ```
 
 -------------

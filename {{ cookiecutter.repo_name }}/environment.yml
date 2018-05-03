@@ -1,1 +1,7 @@
 # Conda environment file; add project dependencies here
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python-dotenv
